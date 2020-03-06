@@ -1,10 +1,11 @@
 import React from 'react';
 import Display from './display';
 import ButtonPanel from './button-panel';
+import './App.css';
 
 function App() {
   return (
-    <div id="App">
+    <div id="app">
       <Display />
       {' '}
       <ButtonPanel />

@@ -1,40 +1,41 @@
 import React from 'react';
 import Button from './button';
+// import './App.css';
 
 const ButtonPanel = () => (
   <div id="button-panel">
-    <div id="row-1">
-      <Button name="AC" />
-      <Button name="+/-" />
-      <Button name="%" />
-      <Button name="÷" />
+    <div className="row">
+      <Button customClass="gray" name="AC" />
+      <Button customClass="gray" name="+/-" />
+      <Button customClass="gray" name="%" />
+      <Button customClass="orange" name="÷" />
     </div>
 
-    <div id="row-2">
-      <Button name="7" />
-      <Button name="8" />
-      <Button name="9" />
-      <Button name="x" />
+    <div className="row">
+      <Button customClass="gray" name="7" />
+      <Button customClass="gray" name="8" />
+      <Button customClass="gray" name="9" />
+      <Button customClass="orange" name="x" />
     </div>
 
-    <div id="row-3">
-      <Button name="4" />
-      <Button name="5" />
-      <Button name="6" />
-      <Button name="-" />
+    <div className="row">
+      <Button customClass="gray" name="4" />
+      <Button customClass="gray" name="5" />
+      <Button customClass="gray" name="6" />
+      <Button customClass="orange" name="-" />
     </div>
 
-    <div id="row-4">
-      <Button name="1" />
-      <Button name="2" />
-      <Button name="3" />
-      <Button name="+" />
+    <div className="row">
+      <Button customClass="gray" name="1" />
+      <Button customClass="gray" name="2" />
+      <Button customClass="gray" name="3" />
+      <Button customClass="orange" name="+" />
     </div>
 
-    <div id="row-4">
-      <Button name="0" />
-      <Button name="." />
-      <Button name="=" />
+    <div className="row">
+      <Button customClass="gray wide-btn" name="0" />
+      <Button customClass="gray" name="." />
+      <Button customClass="orange" name="=" />
     </div>
   </div>
 );

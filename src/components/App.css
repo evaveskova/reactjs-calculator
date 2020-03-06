@@ -1,0 +1,44 @@
+#app {
+  display: flex;
+  width: 700px;
+  flex-direction: column;
+}
+
+#display {
+  display: flex;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  justify-content: flex-end;
+  height: 100px;
+  width: 700px;
+}
+
+#result {
+  padding: 10px;
+}
+
+#button-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  font-size: 23px;
+  width: 25%;
+  border: 1.5px solid #d1d1d1;
+  height: 100px;
+  cursor: pointer;
+}
+
+.gray {
+  background-color: #e0e0e0;
+}
+
+.orange {
+  background-color: #f4913e;
+}
+
+.wide-btn {
+  width: 50%;
+}

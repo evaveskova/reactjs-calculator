@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name } = props;
+  const { name, customClass } = props;
   return (
-    <button type="button">{name}</button>
+    <button className={'button ' + customClass} type="button">{name}</button>
   );
 };
 
