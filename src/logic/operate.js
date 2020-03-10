@@ -1,4 +1,4 @@
-import Big from 'big';
+import Big from 'big-js';
 
 const operate = (numberOne, numberTwo, operation) => {
   let total = Big(numberOne);
@@ -6,23 +6,23 @@ const operate = (numberOne, numberTwo, operation) => {
 
   switch (operation) {
     case ('%'):
-      total *= (next / 100);
+      total.times(next.div(100));
       break;
 
     case ('÷'):
-      total /= next;
+      total.div(next);
       break;
 
     case ('x'):
-      total *= next;
+      total.times(next);
       break;
 
     case ('-'):
-      total -= next;
+      total.minus(next);
       break;
 
     case ('+'):
-      total += next;
+      total.plus(next);
       break;
 
     default:

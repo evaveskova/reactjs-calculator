@@ -60,7 +60,6 @@ const calculate = (data, buttonName) => {
       break;
 
     default:
-      // console.log(total);
       return total;
   }
 
