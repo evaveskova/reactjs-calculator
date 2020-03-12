@@ -1,12 +1,12 @@
 import Big from 'big-js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  let total = Big(numberOne);
-  const next = Big(numberTwo);
+  let total = new Big(numberOne);
+  const next = new Big(numberTwo);
 
   switch (operation) {
     case ('%'):
-      total = total.times(next.div(100));
+      total = total.div(next.times(100));
       break;
 
     case ('÷'):
@@ -28,7 +28,7 @@ const operate = (numberOne, numberTwo, operation) => {
     default:
       break;
   }
-  return total;
+  return total.toFixed(0);
 };
 
 export default operate;

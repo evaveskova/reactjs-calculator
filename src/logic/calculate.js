@@ -2,7 +2,7 @@ import operate from './operate';
 
 const calculate = (data, buttonName) => {
   let { total, next, operation } = data;
-
+  debugger
   switch (buttonName) {
     case ('0'):
     case ('1'):
@@ -15,9 +15,9 @@ const calculate = (data, buttonName) => {
     case ('8'):
     case ('9'):
       if (!operation) {
-        total += buttonName;
+        total = total ? total += buttonName : buttonName;
       } else {
-        next += buttonName;
+        next = next ? next += buttonName : buttonName;
       }
       break;
 
@@ -26,6 +26,9 @@ const calculate = (data, buttonName) => {
     case ('-'):
     case ('+'):
     case ('%'):
+      if(operation) {
+        total = operate(total, next, operation);
+      }
       operation = buttonName;
       break;
 
@@ -48,14 +51,14 @@ const calculate = (data, buttonName) => {
     case ('='):
       if (next) {
         total = operate(total, next, operation);
-        next = '';
+        next = null;
         operation = null;
       }
 
       break;
     case ('AC'):
-      total = '';
-      next = '';
+      total = null;
+      next = null;
       operation = null;
       break;
 
@@ -63,7 +66,7 @@ const calculate = (data, buttonName) => {
       return total;
   }
 
-  return data;
+  return { total, next, operation };
 };
 
 
