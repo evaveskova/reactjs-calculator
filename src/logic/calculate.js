@@ -2,7 +2,6 @@ import operate from './operate';
 
 const calculate = (data, buttonName) => {
   let { total, next, operation } = data;
-  debugger
   switch (buttonName) {
     case ('0'):
     case ('1'):
@@ -26,7 +25,7 @@ const calculate = (data, buttonName) => {
     case ('-'):
     case ('+'):
     case ('%'):
-      if(operation) {
+      if (operation) {
         total = operate(total, next, operation);
       }
       operation = buttonName;
